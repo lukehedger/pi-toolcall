@@ -9,7 +9,7 @@ pi's default bash renderer decorates every tool call with a `(timeout Ns)`
 suffix, a blank line, an output preview, `... earlier lines` / `[Truncated]`
 hints, and a trailing `Took Ns` footer.
 
-`clean-tool-blocks` collapses each call to just the `$ command` line:
+`toolcall` collapses each call to just the `$ command` line:
 
 - **Collapsed:** only the `$ command` line, or `✗ failed (ctrl+o to expand)` on
   a non-zero exit
@@ -19,7 +19,7 @@ Behaviour is unchanged; only the TUI presentation is cleaner.
 
 ## Enable per project
 
-The extension lives at [`.pi/extensions/clean-tool-blocks.ts`](.pi/extensions/clean-tool-blocks.ts),
+The extension lives at [`.pi/extensions/toolcall.ts`](.pi/extensions/toolcall.ts),
 so it loads automatically for this project once the project is trusted. Run
 `/reload` (or restart pi) to pick it up.
 
@@ -30,7 +30,7 @@ sync with edits made in this repo:
 
 ```bash
 mkdir -p ~/.pi/agent/extensions
-ln -sf "$PWD/.pi/extensions/clean-tool-blocks.ts" ~/.pi/agent/extensions/clean-tool-blocks.ts
+ln -sf "$PWD/.pi/extensions/toolcall.ts" ~/.pi/agent/extensions/toolcall.ts
 ```
 
 Then `/reload` or restart pi.
@@ -41,5 +41,5 @@ Then `/reload` or restart pi.
 ## Test without installing
 
 ```bash
-pi -e ./.pi/extensions/clean-tool-blocks.ts
+pi -e ./.pi/extensions/toolcall.ts
 ```

@@ -1,5 +1,5 @@
 /**
- * Clean Tool Blocks - Collapses pi's shell tool call blocks to a single line.
+ * toolcall - Collapses pi's shell tool call blocks to a single line.
  *
  * pi's default bash renderer decorates every tool call with a "(timeout Ns)"
  * suffix, a blank line, output preview, "... earlier lines" / "[Truncated]"
@@ -13,7 +13,7 @@
  * Behaviour is unchanged; only the TUI presentation is cleaner.
  *
  * Usage: drop into .pi/extensions/ (project) or ~/.pi/agent/extensions/ (global),
- * or test with: pi -e ./clean-tool-blocks.ts
+ * or test with: pi -e ./toolcall.ts
  */
 
 import type { BashToolDetails, ExtensionAPI } from "@earendil-works/pi-coding-agent";
